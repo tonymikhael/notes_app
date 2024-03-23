@@ -3,24 +3,19 @@ import 'package:todo_tharwat/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   final String noteName;
-  final double paddingHeight;
-  final double paddingWidth;
+  final int maxLines;
   const CustomTextField({
     required this.noteName,
-    required this.paddingHeight,
-    required this.paddingWidth,
+    required this.maxLines,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      maxLines: 5,
-      minLines: 1,
+      maxLines: maxLines,
       cursorColor: KprimaryColor,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(
-            vertical: paddingHeight, horizontal: paddingWidth),
         hintText: "Note name",
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
