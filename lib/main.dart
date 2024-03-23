@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_tharwat/view/edit_view.dart';
 import 'package:todo_tharwat/view/note_view.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class NoteApp extends StatelessWidget {
       initialBinding: BindingsBuilder(() {}),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: NoteView(),
+      home: EditView(),
     );
   }
 }
