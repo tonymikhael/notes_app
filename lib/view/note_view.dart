@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:todo_tharwat/widgets/customized_text_field.dart';
 import 'package:todo_tharwat/widgets/notes_view_body.dart';
 
 class NoteView extends StatelessWidget {
@@ -17,20 +18,35 @@ class NoteView extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(16),
                 height: 400,
-                decoration: BoxDecoration(color: Colors.black),
-                child: Column(
+                decoration:
+                    BoxDecoration(color: Color.fromARGB(255, 33, 33, 33)),
+                child: ListView(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "Note name",
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          borderSide: BorderSide(
-                              color: Colors.deepPurple.withOpacity(0.8),
-                              width: 2),
-                        ),
-                      ),
+                    CustomTextField(
+                      noteName: "Note title",
+                      paddingHeight: 20,
+                      paddingWidth: 8,
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    CustomTextField(
+                      noteName: "Contene",
+                      paddingHeight: 80,
+                      paddingWidth: 8,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Add"),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepPurple,
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8)))),
+                    )
                   ],
                 ),
               ));

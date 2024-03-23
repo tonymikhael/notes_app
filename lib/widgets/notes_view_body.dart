@@ -48,7 +48,7 @@ class NotesViewBody extends StatelessWidget {
                 itemBuilder: ((context, index) {
                   return Cusomized_note();
                 })),
-          )
+          ),
         ],
       ),
     );
