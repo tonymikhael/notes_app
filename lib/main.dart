@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_tharwat/view/note_view.dart';
 
 void main() {
@@ -11,10 +12,11 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding: BindingsBuilder(() {}),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home:const NoteView(),
+      home: NoteView(),
     );
   }
 }
