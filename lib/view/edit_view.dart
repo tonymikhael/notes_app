@@ -30,7 +30,7 @@ class EditView extends StatelessWidget {
                 Spacer(),
                 InkWell(
                   onTap: () {
-                    Get.off(NoteView());
+                    Get.off(const NoteView());
                   },
                   child: Container(
                     height: 46,
