@@ -12,7 +12,8 @@ class Cusomized_note extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 70),
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Colors.green, borderRadius: BorderRadius.circular(16)),
+          color: Colors.orangeAccent[200],
+          borderRadius: BorderRadius.circular(16)),
       child: Row(
         children: [
           Padding(
